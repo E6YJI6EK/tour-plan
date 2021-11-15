@@ -1,0 +1,48 @@
+* { 
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+/* Header */
+
+.header-wrapper {
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.search-block__input {
+    background: #F5FAFE;
+    border-radius: 6px;
+    height: 40px;
+}
+
+.search-block__btn {
+    height: 40px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    width: 107px;
+    justify-content: space-between;
+}
+
+.profile__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-wrapper {
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+}

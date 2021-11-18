@@ -1,0 +1,81 @@
+@import '../settings'
+@import '../variables'
+
+// Header
+
+.header
+    &-wrapper
+        +flex(space-between, center, nowrap)
+        padding: 40px 0
+        margin: auto
+
+    &__search-block
+        margin-right: auto
+        margin-left: 108px
+
+    &__logo
+        width: 177px
+
+.search-block 
+    display: flex
+    position: relative
+    height: 40px
+    width: 350px
+    &__input
+        width: 100%
+        background: #f5fafe
+        height: 100%
+        font-family: Mulish
+        font-size: 12px
+        line-height: 15px
+        color: #333333
+        padding-left: 23px
+        border: none
+        border-radius: 6px 0 0 6px
+    &__input:active, &__input:focus
+        outline: 0 
+    &__btn
+        background: $primary-color
+        border: none
+        top: 0
+        right: 0
+        height: 100%
+        width: 65px
+        border-radius: 0 6px 6px 0 
+        position: absolute
+        cursor: pointer
+    &__btn:hover
+        background: darken($primary-color, 5%)
+    
+
+.profile
+    +flex(space-between, center, wrap)
+    width: 107px
+
+    &__avatar
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        object-fit: cover
+
+    &__name
+        font-family: Mulish
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        color: $font-color
+
+.nav
+    background: $secondary-color
+    width: 100%
+    &-wrapper
+        +flex(space-between, center, wrap)
+        padding: 30px 0
+    &-link
+        color: #ffffff
+        font-family: Mulish
+        font-size: 14px
+        line-height: 18px
+        text-transform: uppercase;  
+        

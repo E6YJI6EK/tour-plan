@@ -9,20 +9,44 @@
         max-width: 700px
     .header
         &__search-block
-            margin-left: auto
-@media (max-width: 768px)
-    .container
-        max-width: 576px
-        width: 92%
+            margin-left: auto           
+            &_input
+                width: 340px
+        &__logo
+            width: 132px
     .nav
         &-link
             font-size: 12px
             line-height: 15px
         &-wrapper
             padding: 22px 0
-    .search-block
-        width: 340px
     .header
         &-wrapper
             padding: 30px 0
-        
+@media (max-width: 768px)
+    .container
+        max-width: 576px
+        width: 92%
+    .nav
+        display: none
+    .header
+        &__search-block
+            display: none
+        &__profile
+            display: none 
+    .menu-btn
+        padding: 0
+        width: 16px
+        height: 11px
+        +flex(space-between, center, column)
+        &__line
+            width: 16px
+            height: 1px
+            background: $font-color       
+@media (max-width: 576px)
+    .container
+        width: 90%
+    .header
+        &__logo
+            width: 99px
+            height: 14px

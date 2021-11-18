@@ -16,6 +16,16 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -32,6 +42,16 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .header-wrapper {
@@ -59,17 +79,20 @@ a:hover {
   width: 177px;
 }
 
+.header__menu-btn {
+  display: none;
+}
+
 .search-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   height: 40px;
-  width: 350px;
 }
 
 .search-block__input {
-  width: 100%;
+  width: 350px;
   background: #f5fafe;
   height: 100%;
   font-family: Mulish;
@@ -179,6 +202,16 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -192,12 +225,11 @@ a:hover {
   .header__search-block {
     margin-left: auto;
   }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 576px;
-    width: 92%;
+  .header__search-block_input {
+    width: 340px;
+  }
+  .header__logo {
+    width: 132px;
   }
   .nav-link {
     font-size: 12px;
@@ -206,11 +238,57 @@ a:hover {
   .nav-wrapper {
     padding: 22px 0;
   }
-  .search-block {
-    width: 340px;
-  }
   .header-wrapper {
     padding: 30px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+    width: 92%;
+  }
+  .nav {
+    display: none;
+  }
+  .header__search-block {
+    display: none;
+  }
+  .header__profile {
+    display: none;
+  }
+  .menu-btn {
+    padding: 0;
+    width: 16px;
+    height: 11px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .menu-btn__line {
+    width: 16px;
+    height: 1px;
+    background: #333333;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+  .header__logo {
+    width: 99px;
+    height: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

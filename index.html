@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <title>Hotel Booking - Tour Plan</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- header -->
     <header class="header">
-        <div class="container">
-            <div class="header-wrapper">
-                <img src="img/horizontal-logo.svg" alt="" class="header__logo">
-                <form action="" class="search-block header__search-block">
-                    <input name="search-location" type="text" class="search-block__input"
-                        placeholder="Search Location |">
-                    <button class="search-block__btn"><img src="img/search-icon.svg" alt="search-icon"></button>
-                </form>
-                <a href="#" class="profile header__profile">
-                    <img src="img/profile-avatar.png" alt="avatar: Nathan" class="profile__avatar">
-                    <span href="#" class="profile__name">Nathan</span>
-                </a>
-                <button class="menu-btn header__menu-btn">
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                    <span class="menu-btn__line"></span>
-                </button>
-            </div>
+      <div class="container">
+        <div class="header-wrapper">
+          <img src="img/horizontal-logo.svg" alt="" class="header__logo" />
+          <form action="" class="search-block header__search-block">
+            <input
+              name="search-location"
+              type="text"
+              class="search-block__input"
+              placeholder="Search Location |"
+            />
+            <button class="search-block__btn">
+              <img src="img/search-icon.svg" alt="search-icon" />
+            </button>
+          </form>
+          <a href="#" class="profile header__profile">
+            <img
+              src="img/profile-avatar.png"
+              alt="avatar: Nathan"
+              class="profile__avatar"
+            />
+            <span class="profile__name">Nathan</span>
+          </a>
+          <button class="menu-btn header__menu-btn">
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+          </button>
         </div>
-            <nav class="nav">
-                <div class="container">
-                    <div class="nav-wrapper">
-                        <a href="#" class="nav-link">All Deals</a>
-                        <a href="#" class="nav-link">Hotels</a>
-                        <a href="#" class="nav-link">Activities</a>
-                        <a href="#" class="nav-link">Hotel Day Packages</a>
-                        <a href="#" class="nav-link">Restaurants</a>
-                        <a href="#" class="nav-link">Events</a>
-                        <a href="#" class="nav-link">Rodrigues</a>
-                    </div>
-                </div>
-            </nav>
+      </div>
+      <nav class="nav">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" class="nav-link">All Deals</a>
+            <a href="#" class="nav-link">Hotels</a>
+            <a href="#" class="nav-link">Activities</a>
+            <a href="#" class="nav-link">Hotel Day Packages</a>
+            <a href="#" class="nav-link">Restaurants</a>
+            <a href="#" class="nav-link">Events</a>
+            <a href="#" class="nav-link">Rodrigues</a>
+          </div>
+        </div>
+      </nav>
     </header>
-</body>
-
+    <!-- breadcrumb -->
+    <nav class="breadcrumb">
+      <div class="container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-list__item">
+            <a href="#" class="breadcrumb-list__link">Home</a>
+          </li>
+          <li class="breadcrumb-list__item">
+            <a href="#" class="breadcrumb-list__link">Flash Offers</a>
+          </li>
+          <li class="breadcrumb-list__item">Grand Hilton Hotel</li>
+        </ul>
+      </div>
+    </nav>
+    <!-- breadcrumb -->
+    <section class="hotel">
+      <div class="container">
+        <div class="hotel-info">
+          <div class="hotel-info__text">
+            <div class="hotel-wrapper">
+              <div class="stars">
+                <img src="img/star.svg" alt="star" class="star">
+                <img src="img/star.svg" alt="star" class="star">
+                <img src="img/star.svg" alt="star" class="star">
+                <img src="img/star.svg" alt="star" class="star">
+                <img src="img/star.svg" alt="star" class="star">
+              </div>
+              <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
+              <span class="offer hotel__offer">Flash Offer</span>
+            </div>
+            <p class="hotel-description hotel-info__description">
+              Half-Board/ All Inclusive + Complimentary Activities + Child Stays
+              Free
+            </p>
+          </div>
+          <div class="rating hotel-info__rating">
+            <span class="rating__text">User Rattings</span>
+            <span class="rating__counter">4.5/5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

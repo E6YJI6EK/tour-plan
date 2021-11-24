@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <title>Hotel Booking - Tour Plan</title>
@@ -82,11 +86,11 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <div class="stars">
-                <img src="img/star.svg" alt="star" class="star">
-                <img src="img/star.svg" alt="star" class="star">
-                <img src="img/star.svg" alt="star" class="star">
-                <img src="img/star.svg" alt="star" class="star">
-                <img src="img/star.svg" alt="star" class="star">
+                <img src="img/star.svg" alt="star" class="star" />
+                <img src="img/star.svg" alt="star" class="star" />
+                <img src="img/star.svg" alt="star" class="star" />
+                <img src="img/star.svg" alt="star" class="star" />
+                <img src="img/star.svg" alt="star" class="star" />
               </div>
               <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
               <span class="offer hotel__offer">Flash Offer</span>
@@ -101,7 +105,40 @@
             <span class="rating__counter">4.5/5</span>
           </div>
         </div>
+        <!-- end of hotel-info -->
+        <div class="hotel-grid">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  src="https://media.kg-portal.ru/anime/j/jojosbizarreadventurestardustcrusaders/images/jojosbizarreadventurestardustcrusaders_194.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://pbs.twimg.com/media/D0fLXvBUcAAo2Jr.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://media.kg-portal.ru/anime/j/jojosbizarreadventurestardustcrusaders2/images/jojosbizarreadventurestardustcrusaders2_239.jpg"
+                  alt=""
+                />
+              </div>
+              ...
+            </div>
+            <!-- If we need navigation buttons -->
+            <button class="slider-button slider-button__prev"></button>
+            <button class="slider-button slider-button__next"></button>
+          </div>
+        </div>
       </div>
     </section>
   </body>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
 </html>

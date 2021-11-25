@@ -23,7 +23,8 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 button {
@@ -473,14 +474,14 @@ button {
 .map {
   width: 347px;
   height: 213px;
-  background: #000;
-  border-radius: 8px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .swiper {
-  margin: 0 !important;
-  width: 728px;
-  height: 450px;
+  margin: 0;
+  max-width: 728px;
+  min-height: 100%;
   border-radius: 8px 8px;
   position: relative;
 }
@@ -497,11 +498,6 @@ button {
   z-index: 98;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
   background: linear-gradient(180deg, rgba(0, 122, 223, 0.48), rgba(255, 255, 255, 0.128) 100%);
-}
-
-.slider {
-  width: 100%;
-  height: 100%;
 }
 
 .slider-button {
@@ -555,7 +551,8 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 button {
@@ -567,6 +564,12 @@ button {
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .swiper {
+    width: 590px;
+  }
+  .swiper-slide__img {
+    height: 100%;
   }
 }
 
@@ -592,6 +595,27 @@ button {
   }
   .header-wrapper {
     padding: 30px 0;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .booking, .map {
+    width: 340px;
+  }
+  .swiper {
+    width: 100%;
   }
 }
 
@@ -661,6 +685,25 @@ button {
             order: -1;
     margin-left: 0;
   }
+  .swiper {
+    height: 350px;
+  }
+  .swiper-slide__img {
+    width: 100%;
+  }
+  .hotel-right-wrapper {
+    min-height: 450px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -670,6 +713,19 @@ button {
   .header__logo {
     width: 99px;
     height: 14px;
+  }
+  .swiper {
+    height: 250px;
+  }
+  .hotel__slider {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swiper {
+    height: 180px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

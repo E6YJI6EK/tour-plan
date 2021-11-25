@@ -1,9 +1,14 @@
 @import 'settings'
 @import 'variables'
 
-@media(max-width:1200px)
+@media(max-width: 1200px)
     .container
         max-width: 960px
+    .swiper
+        width: 590px
+        &-slide
+            &__img
+                height: 100%
 @media(max-width: 992px)
     .container
         max-width: 700px
@@ -23,6 +28,17 @@
     .header
         &-wrapper
             padding: 30px 0
+    .hotel
+        &-grid
+            flex-direction: column
+        &__slider
+            margin-bottom: 30px
+        &-right-wrapper
+            flex-direction: row
+    .booking, .map
+        width: 340px
+    .swiper
+        width: 100%
 @media (max-width: 768px)
     .container
         max-width: 576px
@@ -61,6 +77,19 @@
         &__offer
             order: -1
             margin-left: 0
+    .swiper
+        height: 350px
+        &-slide
+            &__img
+                width: 100%
+    .hotel
+        &-right-wrapper
+            min-height: 450px
+            flex-direction: column
+    .booking
+        width: 100%
+    .map
+        width: 100%
 @media (max-width: 576px)
     .container
         width: 90%
@@ -68,3 +97,15 @@
         &__logo
             width: 99px
             height: 14px
+    .swiper
+        height: 250px
+    .hotel
+        &__slider
+            margin-bottom: 20px
+
+@media (max-width: 375px)
+    .swiper
+        height: 180px
+        width: 100%
+
+        

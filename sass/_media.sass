@@ -90,6 +90,26 @@
         width: 100%
     .map
         width: 100%
+    .newsletter
+        background-position: none 
+        &-wrapper
+            width: 700px
+@media (max-width: 720px)
+    .newsletter
+        &-wrapper
+            width: 90%
+        &__text
+            font-weight: 300
+            font-size: 20px
+            line-height: 25px
+        &__strong
+            font-weight: 600
+            font-size: 30px
+            line-height: 38px
+        &__subscribe
+            .form-block
+                &__input
+                    width: 300px
 @media (max-width: 576px)
     .container
         width: 90%
@@ -98,7 +118,19 @@
     .hotel
         &__slider
             margin-bottom: 20px
-
+    .newsletter
+        height: 320px
+        &-wrapper
+            width: 80%
+            height: 50%
+            +flex(space-between, flex-start, column)
+        &__title
+            margin-bottom: 45px
+        &__subscribe
+            width: 100%
+            .form-block
+                &__input
+                    width: 100%
 @media (max-width: 375px)
     .swiper
         height: 180px

@@ -1,0 +1,45 @@
+.newsletter
+    height: 260px
+    display: flex
+    align-items: center
+    border: 1px solid black
+    background: url(../../img/newsletter_bg.png)
+    position: relative
+    z-index: 1
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        z-index: 2
+        background: rgba(10, 34, 61, 0.8)
+    &-wrapper
+        position: relative
+        z-index: 3
+        margin: auto
+        width: 730px
+        +flex(space-between, center, row)
+    &__title
+        +flex(space-between, flex-start, column)
+    &__text
+        color: #ffffff
+        font-weight: 300
+        font-size: 24px
+        line-height: 30px
+    &__strong
+        color: #ffffff
+        font-weight: 600
+        font-size: 36px
+        line-height: 45px
+        text-transform: uppercase
+    &__subscribe
+        height: 55px
+        overflow: hidden
+        .form-block
+            &__btn
+                color: #ffffff
+                font-weight: bold
+                font-size: 12px
+                line-height: 15px

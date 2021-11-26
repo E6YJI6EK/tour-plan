@@ -710,10 +710,6 @@ button {
   .container {
     width: 90%;
   }
-  .header__logo {
-    width: 99px;
-    height: 14px;
-  }
   .swiper {
     height: 250px;
   }
@@ -726,6 +722,12 @@ button {
   .swiper {
     height: 180px;
     width: 100%;
+  }
+}
+
+@media (max-width: 280px) {
+  .booking {
+    padding: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */

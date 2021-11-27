@@ -1,0 +1,61 @@
+.reviews
+    padding-top: 40px
+    padding-bottom: 70px
+    &__title
+        font-weight: bold
+        font-size: 36px
+        line-height: 45px
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 70px
+    &-slider
+        &__item
+            +flex(space-between, center, column)
+            background: #fff
+            border-radius: 8px
+            width: 730px
+            margin: 45px auto 0 auto
+            padding: 0 62px 30px 62px
+            position: relative
+            &::before
+                content: ''
+                background: url(../../img/left-quote.svg)
+                background-repeat: no-repeat
+                width: 70px
+                height: 47px
+                position: absolute
+                top: 13px
+                left: 62px
+            &::after
+                content: ''
+                background: url(../../img/right-quote.svg)
+                background-repeat: no-repeat
+                width: 70px
+                height: 47px
+                position: absolute
+                right: 62px
+                top: 118px
+        &__profile
+            +flex(space-between, center, column)
+        &__avatar
+            margin-top: -45px
+            width: 90px
+            height: 90px
+            border-radius: 50%
+            margin-bottom: 9px
+        &__name
+            margin: 0 0 10px 0
+            color: $primary-color
+            font-weight: bold
+            font-size: 12px
+            line-height: 15px
+        &__date
+            font-size: 10px
+            line-height: 13px
+            margin-bottom: 4px
+        &__text
+            font-size: 12px
+            line-height: 160%
+            text-align: justify
+            margin-top: 40px
+            max-width: 537px

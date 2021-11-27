@@ -13,5 +13,5 @@ let bgPosY = "0%"
 
 window.addEventListener('scroll', () => {
     bgPosY = (parseInt(scrollY) / scrollHeight) * 100
-    object.style.backgroundPosition = bgPosX + ' ' + bgPosY + "%"
+    object.style.backgroundPosition = bgPosX + ' ' + (100 - bgPosY) + "%"
 })

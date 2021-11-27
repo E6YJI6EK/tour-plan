@@ -1,4 +1,4 @@
-.swiper
+.hotel-slider
     margin: 0 
     max-width: 728px
     min-height: 100%
@@ -15,8 +15,8 @@
         right: 0
         z-index: 98
         background: linear-gradient(180deg, rgba(0, 122, 223, 0.48), rgba(255, 255, 255, 0.128) 100%)
-.slider
-    &-button
+    
+    &__button
         cursor: pointer
         position: absolute
         top: 0
@@ -28,11 +28,32 @@
         top: 50%
         transform: translateY(-50%)
 
-        &__next
+        &_next
             right: 18px
             background: url(../img/arrow-next.svg) no-repeat center
             background-size: 10px
-        &__prev
+        &_prev
             left: 18px
             background: url(../img/arrow-prev.svg) no-repeat center
+            background-size: 10px
+
+.reviews-slider
+    &__button
+        cursor: pointer
+        position: absolute
+        top: 0
+        z-index: 99
+        width: 30px
+        height: 30px
+        border: none
+        background-color: transparent
+        top: 50%
+        transform: translateY(-50%)
+        &_next
+            right: 18px
+            background: url(../img/feedback_arrow-right.svg) no-repeat center
+            background-size: 10px
+        &_prev
+            left: 18px
+            background: url(../img/feedback_arrow-left.svg) no-repeat center
             background-size: 10px

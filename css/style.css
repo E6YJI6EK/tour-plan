@@ -561,7 +561,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(../../img/newsletter_bg_parallax.png);
+  background-image: url(../img/newsletter_bg_parallax.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -747,6 +747,106 @@ button {
   max-width: 537px;
 }
 
+.activities {
+  padding-top: 60px;
+  padding-bottom: 98px;
+}
+
+.activities__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0 0 57px 0;
+}
+
+.activities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  z-index: 0;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 255px;
+  width: 255px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 24px 26px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.card__title {
+  color: #fff;
+  margin-top: auto;
+  z-index: 2;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+
+.card__button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  padding: 7px 22px;
+  z-index: 10;
+  border-radius: 4px;
+  background: #EC1F46;
+  cursor: pointer;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -792,6 +892,10 @@ button {
   .hotel-slider__img {
     height: 100%;
     width: 100%;
+  }
+  .card {
+    width: 230px;
+    height: 230px;
   }
 }
 
@@ -839,6 +943,13 @@ button {
   }
   .reviews-slider__item {
     max-width: 580px;
+  }
+  .activities__card {
+    margin-bottom: 20px;
+  }
+  .card {
+    width: 340px;
+    height: 230px;
   }
 }
 
@@ -951,6 +1062,10 @@ button {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
+  .card {
+    width: 48%;
+    height: 250px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1007,6 +1122,9 @@ button {
     width: 100%;
   }
   .newsletter__subscribe .form-block__input {
+    width: 100%;
+  }
+  .card {
     width: 100%;
   }
 }

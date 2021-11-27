@@ -542,13 +542,13 @@ button {
 }
 
 .reviews-slider__button_next {
-  right: 18px;
+  right: 0;
   background: url(../img/feedback_arrow-right.svg) no-repeat center;
   background-size: 10px;
 }
 
 .reviews-slider__button_prev {
-  left: 18px;
+  left: 0;
   background: url(../img/feedback_arrow-left.svg) no-repeat center;
   background-size: 10px;
 }
@@ -673,7 +673,7 @@ button {
           flex-flow: column;
   background: #fff;
   border-radius: 8px;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0 auto;
   padding: 0 62px 30px 62px;
   position: relative;
@@ -786,11 +786,12 @@ button {
   .container {
     max-width: 960px;
   }
-  .swiper {
+  .hotel-slider {
     width: 590px;
   }
-  .swiper-slide__img {
+  .hotel-slider__img {
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -823,7 +824,8 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .hotel__slider {
+  .hotel-slider {
+    width: 100%;
     margin-bottom: 30px;
   }
   .hotel-right-wrapper {
@@ -835,8 +837,8 @@ button {
   .booking, .map {
     width: 340px;
   }
-  .swiper {
-    width: 100%;
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 
@@ -906,18 +908,15 @@ button {
             order: -1;
     margin-left: 0;
   }
-  .swiper {
-    height: 350px;
-  }
-  .swiper-slide__img {
-    width: 100%;
-  }
   .hotel-right-wrapper {
     min-height: 450px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .hotel-slider {
+    height: 350px;
   }
   .booking {
     width: 100%;
@@ -929,7 +928,28 @@ button {
     background-position: none;
   }
   .newsletter-wrapper {
-    width: 700px;
+    max-width: 700px;
+  }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item::after, .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button_prev {
+    margin-left: -85px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .reviews-slider__button_next {
+    right: 50%;
+    margin-right: -85px;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
   }
 }
 
@@ -956,10 +976,8 @@ button {
   .container {
     width: 90%;
   }
-  .swiper {
+  .hotel-slider {
     height: 250px;
-  }
-  .hotel__slider {
     margin-bottom: 20px;
   }
   .newsletter {
@@ -994,7 +1012,7 @@ button {
 }
 
 @media (max-width: 375px) {
-  .swiper {
+  .hotel-slider {
     height: 180px;
     width: 100%;
   }

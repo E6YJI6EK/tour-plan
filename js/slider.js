@@ -15,6 +15,7 @@ const hotelSlider = new Swiper('.hotel-slider', {
 const reviewsSlider = new Swiper('.reviews-slider', {
   // Optional parameters
   loop: false,
+  allowTouchMove: false,
   // Navigation arrows
   navigation: {
     nextEl: '.reviews-slider__button_next',
@@ -24,4 +25,4 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: false,
   }
-});
+})

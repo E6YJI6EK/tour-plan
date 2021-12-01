@@ -21,22 +21,31 @@
 
   <body>
     <!-- header -->
-    <header class="header">
+    <header class="header header_mobile_fixed">
       <div class="container">
         <div class="header-wrapper">
           <img src="img/horizontal-logo.svg" alt="" class="header__logo" />
-          <form action="" class="form-block header__search-block">
+          <form
+            action=""
+            class="
+              form-block
+              header__search-block header__search-block_mobile_hidden
+            "
+          >
             <input
               name="search-location"
               type="text"
               class="form-block__input"
               placeholder="Search Location |"
             />
-            <button class="form-block__btn">
+            <button class="btn form-block__btn">
               <img src="img/search-icon.svg" alt="search-icon" />
             </button>
           </form>
-          <a href="#" class="profile header__profile">
+          <a
+            href="#"
+            class="profile header__profile header__profile_mobile_hidden"
+          >
             <img
               src="img/profile-avatar.png"
               alt="avatar: Nathan"
@@ -51,16 +60,63 @@
           </button>
         </div>
       </div>
-      <nav class="nav">
+      <nav class="header__nav">
         <div class="container">
-          <div class="nav-wrapper">
-            <a href="#" class="nav-link">All Deals</a>
-            <a href="#" class="nav-link">Hotels</a>
-            <a href="#" class="nav-link">Activities</a>
-            <a href="#" class="nav-link">Hotel Day Packages</a>
-            <a href="#" class="nav-link">Restaurants</a>
-            <a href="#" class="nav-link">Events</a>
-            <a href="#" class="nav-link">Rodrigues</a>
+          <div class="header__nav-wrapper">
+            <div class="header__nav__item header__nav__item_mobile_visible">
+              <a
+                href="#"
+                class="profile header__profile header__profile_mobile_visible"
+              >
+                <img
+                  src="img/profile-avatar.png"
+                  alt="avatar: Nathan"
+                  class="profile__avatar"
+                />
+                <span class="profile__name profile__name_light">Nathan</span>
+              </a>
+            </div>
+            <div class="header__nav__item header__nav__item_mobile_visible">
+              <form
+                action=""
+                class="
+                  form-block
+                  header__search-block header__search-block_mobile_visible
+                "
+              >
+                <input
+                  name="search-location"
+                  type="text"
+                  class="form-block__input"
+                  placeholder="Search Location |"
+                />
+                <button class="btn form-block__btn">
+                  <img src="img/search-icon.svg" alt="search-icon" />
+                </button>
+              </form>
+            </div>
+
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">All Deals</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Hotels</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Activities</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Hotel Day Packages</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Restaurants</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Events</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Rodrigues</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -171,7 +227,7 @@
                   <span class="booking__num">12100</span>
                 </a>
               </div>
-              <button class="button booking__button">View Other Options</button>
+              <button class="btn booking__btn">View Other Options</button>
             </div>
             <div class="map">
               <iframe
@@ -200,7 +256,7 @@
             class="form-block__input"
             placeholder="Your Email Addres"
           />
-          <button class="form-block__btn">Send</button>
+          <button class="btn form-block__btn">Send</button>
         </form>
       </div>
     </section>
@@ -323,7 +379,7 @@
               class="card__img"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button class="btn card__btn">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -332,7 +388,7 @@
               class="card__img"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button class="btn card__btn">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -341,7 +397,7 @@
               class="card__img"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button class="btn card__btn">Book Now</button>
           </div>
           <div class="card activities__card">
             <img
@@ -350,7 +406,7 @@
               class="card__img"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button class="btn card__btn">Book Now</button>
           </div>
         </div>
       </div>
@@ -516,17 +572,25 @@
                 class="footer__message"
                 placeholder="Message"
               ></textarea>
-              <button class="button footer__button">Send</button>
+              <button class="btn footer__btn">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
           <div class="footer__bottom">
             <div class="footer__bottom__links">
               <a href="" class="footer__link footer__link_bottom">Disclaimer</a>
-              <a href="" class="footer__link footer__link_bottom">Conditions of use</a>
-              <a href="" class="footer__link footer__link_bottom">Cancellation policy</a>
+              <a href="" class="footer__link footer__link_bottom"
+                >Conditions of use</a
+              >
+              <a href="" class="footer__link footer__link_bottom"
+                >Cancellation policy</a
+              >
             </div>
-            <img src="img/pay_systems.png" alt="Pay Systems" class="pay_systems">
+            <img
+              src="img/pay_systems.png"
+              alt="Pay Systems"
+              class="pay_systems"
+            />
           </div>
         </div>
       </div>
@@ -535,4 +599,5 @@
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/parallax.js"></script>
+  <script src="js/mobile-menu.js"></script>
 </html>

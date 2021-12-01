@@ -23,12 +23,13 @@
             &-wrapper
                 min-width: 83px
                 +flex(space-between,center, row)
-    &__contact-details
-        grid-column: span 2
-        color: $footer-color
-    &__contacts-form
-        display: grid
-        grid-column: span 2
+    &__contact
+        &-details
+            grid-column: span 2
+            color: $footer-color
+        &-form
+            display: grid
+            grid-column: span 2
 
     &__ul
         list-style: none
@@ -44,6 +45,9 @@
             margin-bottom: 20px
     &__link
         color: inherit
+        &_bottom
+            font-size: 12px
+            line-height: 15px
     &__icon
         min-width: 40px
 
@@ -87,3 +91,10 @@
         font-size: 12px
         line-height: 15px
         color: $footer-color  
+    &__bottom
+        grid-column: 3 / 5
+        +flex(space-between, flex-end, row)
+        &__links
+            width: 285px
+            +flex(space-between, center, row)
+

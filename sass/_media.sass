@@ -102,14 +102,18 @@
         &__search-block
             overflow: hidden
         &__nav
-            display: none
+            overflow: hidden
+            transition-duration: 0.3s 
+            transition-timing-function: cubic-bezier
+            width: 100%
             position: fixed
-            left: 0
-            right: 0
+            left: 100%
+            right: -100%
             bottom: 0
-            top: 78px
+            top: 70px
             &_visible
-                display: block
+                left: 0
+                right: 0
             &-wrapper
                 flex-direction: column
             &__item

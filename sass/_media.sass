@@ -1,6 +1,3 @@
-@import 'settings'
-@import 'variables'
-
 @media(max-width: 1200px)
     .container
         max-width: 960px
@@ -9,6 +6,33 @@
         &__img
             height: 100%
             width: 100%
+    .packages
+        &-grid
+            grid-template-columns: repeat(3, minmax(300px, 1fr))
+            grid-template-rows: repeat(2, 400px)
+        &__item
+            &-wrapper
+                padding: 13px 20px 20px 20px 
+                &_right
+                    padding: 15px
+        &__text
+            margin: 15px 0 0 0 
+        &__properties
+            margin-top: 15px
+            &_right
+                margin-top: 15px
+        &__property
+            margin-bottom: 11px
+            &:last-child
+                margin-bottom: 0
+        &__bottom
+            &_right
+                margin-top: 25px
+            margin-top: 20px
+        &__price
+            &_old
+                top: -15px
+                
     .activities
         &-wrapper
             grid-template: 230px / repeat(4, 230px)
@@ -46,6 +70,12 @@
             flex-direction: row
     .booking, .map
         width: 340px
+
+    .packages
+        &-grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(3, 400px)
+
     .reviews
         &-slider
             &__item
@@ -174,6 +204,15 @@
         width: 100%
     .map
         width: 100%
+
+    .packages
+        &__text
+            font-size: 13px 
+        &__properties
+            margin-top: 13px
+        &__bottom
+            margin-top: 25px
+
     .newsletter
         &-wrapper
             max-width: 700px
@@ -222,6 +261,41 @@
         &-slider
             height: 250px
             margin-bottom: 20px
+
+    .packages
+        &-grid
+            width: 100%
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(5, 500px)
+            column-gap: 0
+        &__item
+            &-wrapper
+                flex-direction: column
+                height: 40%
+                padding: 15px
+                &_right
+                    width: 100%
+            &::before
+                width: 95px
+                height: 30px
+                font-weight: 600
+                font-size: 12px
+                line-height: 15px
+            &_vertical
+                grid-column: 1
+                flex-direction: column
+        
+        &__bottom
+            margin: 50px
+        &__img
+            width: 100%
+            height: 60%
+            &_vertical
+                width: 100%
+                height: 60%
+        &__text, &__stars
+            display: none
+
     .newsletter
         height: 320px
         &-wrapper

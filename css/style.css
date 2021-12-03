@@ -1729,9 +1729,6 @@ input:active, input:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .packages__bottom {
-    margin: 50px;
-  }
   .packages__img {
     width: 100%;
     height: 60%;

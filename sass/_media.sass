@@ -115,6 +115,9 @@
                 grid-row: 4
         &__bottom
             grid-column: span 5
+    .modal
+        &__dialog
+            padding: 33px 48px
 @media (max-width: 768px)
     body
         padding-top: 78px
@@ -238,6 +241,10 @@
     .footer
         &__input
             flex-basis: 100%
+            
+    .modal
+        &__dialog
+            width: 70%
 @media (max-width: 720px)
     .newsletter
         &-wrapper
@@ -341,6 +348,15 @@
         &__bottom
             grid-column: 1
             grid-row: 8
+    .modal
+        &__dialog
+            padding: 33px 28px
+            width: 80%
+        &__bottom
+            flex-direction: column
+            align-items: start
+        &__btn
+            margin-bottom: 10px
 @media (max-width: 500px)
     .footer
         &__bottom

@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <title>Hotel Booking - Tour Plan</title>
   </head>
 
@@ -163,7 +164,7 @@
         </div>
         <!-- end of hotel-info -->
         <div class="hotel-grid">
-          <div class="swiper hotel-slider">
+          <div class="swiper hotel-slider" data-aos="fade-right">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -197,7 +198,7 @@
               class="hotel-slider__button hotel-slider__button_next"
             ></button>
           </div>
-          <div class="hotel-right-wrapper">
+          <div class="hotel-right-wrapper" data-aos="fade-left">
             <div class="booking">
               <div class="booking__info">
                 <div class="booking__price">
@@ -248,7 +249,11 @@
         <div class="packages-wrapper">
           <h2 class="packages__title">Other Packages</h2>
           <div class="packages-grid">
-            <div class="packages__item packages__item_vertical">
+            <div
+              class="packages__item packages__item_vertical"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <img
                 src="img/packages_img_vertical.png"
                 alt="Package Img Vertical"
@@ -304,7 +309,11 @@
                 </div>
               </div>
             </div>
-            <div class="packages__item">
+            <div
+              class="packages__item"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
               <img
                 src="img/packages_img_h-1.png"
                 alt="Package Img"
@@ -344,7 +353,11 @@
                 </div>
               </div>
             </div>
-            <div class="packages__item">
+            <div
+              class="packages__item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <img
                 src="img/packages_img_h-2.png"
                 alt="Package Img"
@@ -384,7 +397,7 @@
                 </div>
               </div>
             </div>
-            <div class="packages__item">
+            <div class="packages__item" data-aos="fade-up" data-aos-delay="400">
               <img
                 src="img/packages_img_h-3.png"
                 alt="Package Img"
@@ -424,7 +437,11 @@
                 </div>
               </div>
             </div>
-            <div class="packages__item">
+            <div
+              class="packages__item"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <img
                 src="img/packages_img_h-4.png"
                 alt="Package Img"
@@ -597,7 +614,11 @@
       <div class="container">
         <h2 class="activities__title">Other activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <img
               src="img/cards-img-1.png"
               alt="img: activities"
@@ -606,7 +627,11 @@
             <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="btn card__btn">Book Now</button>
           </div>
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img
               src="img/cards-img-2.png"
               alt="img: activities"
@@ -615,7 +640,11 @@
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="btn card__btn">Book Now</button>
           </div>
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <img
               src="img/cards-img-3.png"
               alt="img: activities"
@@ -624,7 +653,11 @@
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
             <button class="btn card__btn">Book Now</button>
           </div>
-          <div class="card activities__card">
+          <div
+            class="card activities__card"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <img
               src="img/cards-img-4.png"
               alt="img: activities"
@@ -881,4 +914,6 @@
   <script src="js/mobile-menu.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/form-validate.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/animation.js"></script>
 </html>

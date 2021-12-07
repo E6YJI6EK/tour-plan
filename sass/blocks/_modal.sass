@@ -28,23 +28,28 @@
         top: 17px
     &__form
         z-index: 100000000000000000
-    &__btn    
+    &__btn
         width: 160px
         min-height: 50px
         font-weight: bold
         font-size: 12px
         line-height: 15px
         padding: 18px
+
     &__input
         width: 100%
-        margin-bottom: 15px
+        margin-top: 15px
     &__message
         width: 100%
         min-height: 123px
-        margin-bottom: 15px
+        margin-top: 15px
     &_visible
         visibility: visible
         opacity: 1
     &__bottom
         +flex(space-between, center, row)
         width: 100%
+        margin-top: 15px
+.invalid
+    color: $primary-color
+    text-decoration: underline

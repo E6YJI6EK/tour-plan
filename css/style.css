@@ -1253,11 +1253,10 @@ input:active, input:focus {
 }
 
 .footer__input {
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 0 23px 0 23px;
-  height: 50px;
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1379,13 +1378,13 @@ input:active, input:focus {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal_visible {
@@ -1408,6 +1407,12 @@ input:active, input:focus {
       -ms-flex-flow: row;
           flex-flow: row;
   width: 100%;
+  margin-top: 15px;
+}
+
+.invalid {
+  color: #EC1F46;
+  text-decoration: underline;
 }
 
 @media (max-width: 1200px) {
@@ -1464,7 +1469,7 @@ input:active, input:focus {
     -webkit-column-gap: 15px;
             column-gap: 15px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1540,7 +1545,7 @@ input:active, input:focus {
     grid-row: 1 / 2;
     grid-column: span 2;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
@@ -1760,7 +1765,7 @@ input:active, input:focus {
     -ms-grid-columns: 48% 48%;
         grid-template: 250px 250px / 48% 48%;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }

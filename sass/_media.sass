@@ -404,4 +404,11 @@
                 flex-wrap: wrap
                 justify-content: space-evenly
 
-        
+@media(max-height: 500px) 
+    .modal
+        &__dialog
+            max-height: 90%
+            overflow-y: auto
+            overflow-x: hidden
+            &::-webkit-scrollbar
+                width: 0

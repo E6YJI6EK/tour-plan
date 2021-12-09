@@ -1,4 +1,4 @@
-@import 'variables'
+// общие стили проекта
 *
     box-sizing: border-box
 
@@ -11,21 +11,23 @@ body
     max-width: 1110px
     margin: auto
 
-a
-    text-decoration: none
-
-a:hover
-    text-decoration: underline
-
 =flex($jc, $ai, $ff)
     display: flex
     justify-content: $jc
     align-items: $ai
     flex-flow: $ff
 
+// общие стили картинок 
 img
     object-fit: cover
 
+// общие стили ссылок
+a
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+
+// общие стили кнопок
 button
     background: transparent
     border: none
@@ -34,12 +36,20 @@ button
     border-radius: 4px
     color: #fff
     background-color: $primary-color
-.btn:hover
-    background: darken($primary-color, 5%)
+    &:hover
+        background-color: darken($primary-color, 5%)
+
+// отключение стилей при наведении при ширине экрана < 992px
+@media (max-width: 992px)
+    .btn:hover
+        background-color: $primary-color
+    a:hover
+        text-decoration: none
 
 textarea
     resize: none
 
+// убираем аутлайн
 textarea:active, textarea:focus
     outline: none
 
@@ -49,6 +59,7 @@ button:active, button:focus
 input:active, input:focus
     outline: none
 
+// общие стили форм
 .input
     background-color: #fff
     border-radius: 4px
@@ -77,7 +88,7 @@ input:active, input:focus
 .invalid
     color: $primary-color
     
-
+// стили для скроллбара
 .stop-scroll
     height: 100%
     overflow: hidden
@@ -97,7 +108,9 @@ input:active, input:focus
 ::-webkit-scrollbar-thumb:hover 
     background: darken($primary-color, 5%)
 
+// ссылка на гланую страницу
 .go_back
     color: $font-color
+    margin-top: 15px
 
  

@@ -137,7 +137,8 @@
         &__search-block
             overflow: hidden
         &__nav
-            overflow: hidden
+            overflow-y: scroll
+            z-index: 1000000000000000000
             transition-duration: 0.3s 
             transition-timing-function: cubic-bezier
             width: 100%
@@ -248,6 +249,8 @@
     .modal
         &__dialog
             width: 70%
+    ::-webkit-scrollbar-track 
+        background: $dark-color
 @media (max-width: 720px)
     .newsletter
         &-wrapper

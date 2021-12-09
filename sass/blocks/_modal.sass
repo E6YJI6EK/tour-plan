@@ -1,7 +1,6 @@
 .modal
-    visibility: hidden
     opacity: 0
-    //transition: opacity 0.2s
+    visibility: hidden
     z-index: 10000
     &__overlay
         position: fixed
@@ -21,7 +20,6 @@
         border-radius: 8px
         transform: translate(-50%, -50%)
         max-width: 478px
-        //transition: opacity 0.2s
     &__close
         position: absolute
         right: 18px
@@ -44,12 +42,10 @@
         min-height: 123px
         margin-top: 15px
     &_visible
-        visibility: visible
         opacity: 1
+        visibility: visible
     &__bottom
         +flex(space-between, center, row)
         width: 100%
         margin-top: 15px
-.invalid
-    color: $primary-color
-    text-decoration: underline
+

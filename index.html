@@ -251,7 +251,7 @@
           <div class="packages-grid">
             <div
               class="packages__item packages__item_vertical"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="100"
             >
               <img
@@ -305,15 +305,11 @@
                     ><span class="packages__price_old">$ 10,500</span>$
                     8,500</span
                   >
-                  <button class="btn packages__btn">Book Now</button>
+                  <button class="btn packages__btn book_btn">Book Now</button>
                 </div>
               </div>
             </div>
-            <div
-              class="packages__item"
-              data-aos="fade-left"
-              data-aos-delay="200"
-            >
+            <div class="packages__item" data-aos="fade-up" data-aos-delay="200">
               <img
                 src="img/packages_img_h-1.png"
                 alt="Package Img"
@@ -349,15 +345,11 @@
                     ><span class="packages__price_old">$ 8,500</span>$
                     3,000</span
                   >
-                  <button class="btn packages__btn">Book Now</button>
+                  <button class="btn packages__btn book_btn">Book Now</button>
                 </div>
               </div>
             </div>
-            <div
-              class="packages__item"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
+            <div class="packages__item" data-aos="fade-up" data-aos-delay="300">
               <img
                 src="img/packages_img_h-2.png"
                 alt="Package Img"
@@ -393,7 +385,7 @@
                     ><span class="packages__price_old">$ 8,500</span>$
                     3,000</span
                   >
-                  <button class="btn packages__btn">Book Now</button>
+                  <button class="btn packages__btn book_btn">Book Now</button>
                 </div>
               </div>
             </div>
@@ -433,15 +425,11 @@
                     ><span class="packages__price_old">$ 8,500</span>$
                     3,000</span
                   >
-                  <button class="btn packages__btn">Book Now</button>
+                  <button class="btn packages__btn book_btn">Book Now</button>
                 </div>
               </div>
             </div>
-            <div
-              class="packages__item"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
+            <div class="packages__item" data-aos="fade-up" data-aos-delay="500">
               <img
                 src="img/packages_img_h-4.png"
                 alt="Package Img"
@@ -477,7 +465,7 @@
                     ><span class="packages__price_old">$ 8,500</span>$
                     3,000</span
                   >
-                  <button class="btn packages__btn">Book Now</button>
+                  <button class="btn packages__btn book_btn">Book Now</button>
                 </div>
               </div>
             </div>
@@ -491,12 +479,17 @@
           <span class="newsletter__text">subscribe to our</span>
           <span class="newsletter__strong">Newsletter</span>
         </div>
-        <form class="newsletter__subscribe form-block">
+        <form
+          action="send.php"
+          method="POST"
+          class="newsletter__subscribe form-block"
+        >
           <input
-            name="email-location"
             type="email"
             class="form-block__input"
             placeholder="Your Email Addres"
+            name="mail"
+            required
           />
           <button class="btn form-block__btn">Send</button>
         </form>
@@ -625,7 +618,7 @@
               class="card__img"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="btn card__btn">Book Now</button>
+            <button class="btn card__btn book_btn">Book Now</button>
           </div>
           <div
             class="card activities__card"
@@ -638,7 +631,7 @@
               class="card__img"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="btn card__btn">Book Now</button>
+            <button class="btn card__btn book_btn">Book Now</button>
           </div>
           <div
             class="card activities__card"
@@ -651,7 +644,7 @@
               class="card__img"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="btn card__btn">Book Now</button>
+            <button class="btn card__btn book_btn">Book Now</button>
           </div>
           <div
             class="card activities__card"
@@ -664,7 +657,7 @@
               class="card__img"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="btn card__btn">Book Now</button>
+            <button class="btn card__btn book_btn">Book Now</button>
           </div>
         </div>
       </div>
@@ -815,7 +808,7 @@
           </div>
           <div class="footer__contact-form">
             <h3 class="title footer__title">Send us a message</h3>
-            <form action="" class="footer__form form">
+            <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
                 <input
                   type="text"
@@ -838,6 +831,7 @@
               <textarea
                 class="message footer__message"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="btn footer__btn">Send</button>
               <span class="info footer__info">* Required Fields</span>
@@ -862,14 +856,14 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal view_other">
       <div class="modal__overlay">
         <div class="modal__dialog">
-          <a href="" class="modal__close"
-            ><img src="img/close.svg" alt="icon: close button"
-          /></a>
+          <button type="reset" class="modal__close">
+            <img src="img/close.svg" alt="icon: close button" />
+          </button>
           <h3 class="title modal__title">Send us a message</h3>
-          <form action="" class="modal__form">
+          <form action="send.php" method="POST" class="modal__form">
             <input
               type="text"
               class="modal__input input"
@@ -895,6 +889,7 @@
             <textarea
               class="message modal__message"
               placeholder="Message"
+              textarea="message"
             ></textarea>
             <div class="modal__bottom">
               <button class="btn modal__btn">Send</button>

@@ -1,18 +1,1 @@
-const modalDialog = document.querySelector('.modal'),
-modalOpen = document.querySelector('.booking__btn')
-
-modalOpen.addEventListener('click', () => {
-    modalDialog.classList.add("modal_visible")
-    const modalClose = document.querySelector('.modal__close')
-    modalClose.addEventListener('click', e => {
-        e.preventDefault()
-        modalDialog.classList.remove("modal_visible")
-    })
-    window.addEventListener('keydown', e => {
-        if (e.code === 'Escape') {
-            modalDialog.classList.remove("modal_visible")
-        }
-    })
-})
-
-
+const modalViewOther = document.querySelector(".view_other"), modalBookNow = document.querySelector(".book_now"); modalOpenViewOther = document.querySelector(".booking__btn"), modalOpenBookNow = document.querySelectorAll(".book_btn"), modalOpenViewOther.addEventListener("click", () => { document.body.classList.add("stop-scroll"), modalViewOther.classList.add("modal_visible"), modalViewOther.querySelector(".modal__close").addEventListener("click", o => { modalViewOther.classList.remove("modal_visible"), document.body.classList.remove("stop-scroll") }), window.addEventListener("keydown", o => { "Escape" === o.code && (modalViewOther.classList.remove("modal_visible"), document.body.classList.remove("stop-scroll")) }) }), modalOpenBookNow.forEach(o => { o.addEventListener("click", () => { document.body.classList.add("stop-scroll"), modalBookNow.classList.add("modal_visible"), modalBookNow.querySelector(".modal__close").addEventListener("click", o => { o.preventDefault(), modalBookNow.classList.remove("modal_visible"), document.body.classList.remove("stop-scroll") }), window.addEventListener("keydown", o => { "Escape" === o.code && (modalBookNow.classList.remove("modal_visible"), document.body.classList.remove("stop-scroll")) }) }) });

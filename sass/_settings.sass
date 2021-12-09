@@ -73,3 +73,31 @@ input:active, input:focus
     font-size: 12px
     line-height: 15px
     color: $footer-color  
+
+.invalid
+    color: $primary-color
+    
+
+.stop-scroll
+    height: 100%
+    overflow: hidden
+    margin-right: 5px
+
+::-webkit-scrollbar 
+    width: 5px
+
+::-webkit-scrollbar-track 
+    background: lightgrey
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset 
+
+::-webkit-scrollbar-thumb 
+    background: $primary-color
+    border-radius: 8px
+
+::-webkit-scrollbar-thumb:hover 
+    background: darken($primary-color, 5%)
+
+.go_back
+    color: $font-color
+
+ 

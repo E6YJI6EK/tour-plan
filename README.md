@@ -6,6 +6,8 @@ Tour Plan
 
 Используемые технологии: HTML, CSS, SASS, Flexbox CSS, Grid CSS, Javascript, Swiper JS, AOS JS, JQuery, PHP, PHPMailer
 
+Ссылка на сайт: https://bizare-web.ru/projects/best-tour-plan/
+
 Проект выполнил
 
 Нуржанов Айшат. Шестнадцатый поток курса Веб Старт. Тариф "ВСЕ САМ". 

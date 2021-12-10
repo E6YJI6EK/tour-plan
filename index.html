@@ -486,21 +486,19 @@
         <form
           action="send.php"
           method="POST"
-          class="newsletter__subscribe form-block"
+          class="newsletter__subscribe"
         >
         <div class="newsletter__input-group">
-          <div class="newsletter__input">
             <input
             type="email"
-            class="form-block__input"
+            class="newsletter__input"
             placeholder="Your Email Addres"
-            name="mail"
+            name="subscribe"
             required
           />
-          <button class="btn form-block__btn">Send</button>
-          </div>
-        </div>
           
+        </div>
+        <button class="btn newsletter__btn">Send</button>  
         </form>
       </div>
     </section>
@@ -825,6 +823,7 @@
                   class="footer__input input"
                   placeholder="Your Full Name*"
                   name="name"
+                  minlength="2"
                   required
                 />
               </div>
@@ -834,6 +833,7 @@
                   class="footer__input input footer__phone"
                   placeholder="Phone Number*"
                   name="phone"
+                  minlength="18"
                   required
                 />
               </div>
@@ -887,6 +887,7 @@
               class="modal__input input modal__phone"
               placeholder="Phone Number*"
               name="phone"
+              minlength="18"
               required
             />
             <input

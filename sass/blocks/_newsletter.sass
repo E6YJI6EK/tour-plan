@@ -23,6 +23,7 @@
         margin: auto
         width: 730px
         +flex(space-between, center, row)
+    
     &__title
         +flex(space-between, flex-start, column)
     &__text
@@ -38,16 +39,25 @@
         text-transform: uppercase
     &__subscribe
         height: 55px
-        overflow: hidden
-        .form-block
-            &__btn
-                color: #ffffff
-                font-weight: bold
-                font-size: 12px
-                line-height: 15px
+        width: 350px
+        +flex(space-between, center, row)
+        
+    &__btn
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        flex-basis: 25%
+        border-radius: 0 6px  6px 0
+        height: 100%
     &__invalid
         color: $primary-color
     &__input
-        (space-between, center, row)
+        width: 100%
+        height: 100%
+        border-radius: 6px 0 0 6px
+        border: none
+        padding: 17px 0 17px 31px
         &-group
+            flex-basis: 75%
+            height: 100%
             +flex(space-between, start, column)

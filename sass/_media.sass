@@ -212,6 +212,8 @@
         width: 100%
 
     .packages
+        &__title
+            font-size: 26px
         &__text
             font-size: 13px 
         &__properties
@@ -223,6 +225,8 @@
         &-wrapper
             max-width: 700px
     .reviews
+        &__title
+            font-size: 26px
         &-slider
             &__item
                 padding: 0 30px 30px
@@ -367,12 +371,25 @@
         &__btn
             margin-bottom: 10px
 @media (max-width: 500px)
+    .reviews
+        &__title
+            font-size: 22px
+    
+
     .footer
         &__bottom
             flex-direction: column
             align-items: flex-start
             &__links
                 width: 280px
+    .modal
+        &__dialog
+            max-height: 90%
+            overflow-y: auto
+            overflow-x: hidden
+            &::-webkit-scrollbar
+                width: 0
+
         
 @media (max-width: 375px)
     .header
@@ -385,6 +402,19 @@
         &-slider
             height: 180px
             width: 100%
+
+    .reviews
+        &__title
+            font-size: 18px
+
+    .packages
+        &__title
+            font-size: 20px
+
+    .activities
+        &__title
+            font-size: 20px
+
     .footer
         &__bottom
             &__links
@@ -407,11 +437,3 @@
                 flex-wrap: wrap
                 justify-content: space-evenly
 
-@media(max-height: 500px) 
-    .modal
-        &__dialog
-            max-height: 90%
-            overflow-y: auto
-            overflow-x: hidden
-            &::-webkit-scrollbar
-                width: 0

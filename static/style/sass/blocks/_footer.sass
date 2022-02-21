@@ -1,0 +1,91 @@
+.footer
+    background-color: $dark-color
+    color: #fff
+    padding-top: 100px
+    padding-bottom: 46px
+    &-wrapper
+        display: grid
+        grid-template-columns: repeat(4, minmax(min-content, 1fr))
+        grid-gap: 20px
+        grid-auto-rows: minmax(43px, min-content)
+    &__logo_vertical
+        width: 166px
+        align-self: center
+        grid-row: 1 / 3
+    &__categories
+        grid-row: 1 / 4
+    &__social
+        &-network
+            display: flex
+            grid-row: 2 / 4
+            grid-column: span 2
+            align-content: center
+            &-wrapper
+                min-width: 83px
+                +flex(space-between,center, row)
+    &__contact
+        &-details
+            grid-column: span 2
+            color: $footer-color
+        &-form
+            display: grid
+            grid-column: span 2
+
+    &__ul
+        list-style: none
+        margin: 0 
+        padding: 0
+    &__li
+        font-size: 14px
+        line-height: 160%
+        color: $footer-color
+        display: flex
+        align-items: flex-start
+        &_mb-2
+            margin-bottom: 20px
+        &__lines
+            +flex(space-between, start, column)
+        &__line
+            margin: 0
+    &__link
+        color: inherit
+        &_bottom
+            font-size: 12px
+            line-height: 15px
+    &__icon
+        min-width: 40px
+
+    &__title
+        margin: 0 0 16px 0
+        &_inline
+            margin: 0 43px 0 0 
+    &__text
+        margin-bottom: 22px
+    &__input
+        width: 100% 
+        &-group
+            margin-bottom: 15px
+            flex-basis: 48%
+            &_full
+                flex-basis: 100%
+    &__form
+        +flex(space-between, flex-start, wrap)
+    &__message
+        flex-basis: 100%
+        margin-bottom: 23px
+        min-height: 123px
+    &__btn
+        border-radius: 4px
+        width: 160px
+        min-height: 50px
+        font-weight: bold
+        font-size: 12px
+        line-height: 15px
+        padding: 18px
+    &__bottom
+        grid-column: 3 / 5
+        +flex(space-between, flex-end, row)
+        &__links
+            width: 285px
+            +flex(space-between, center, row)
+

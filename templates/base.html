@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% block title -%}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/css/aos.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='style/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {% if title %}
+    <title>Best Tour Plan - {{title}}</title>
+    {% else %}
+    <title>Best Tour Plan - Hotel Booking</title>
+    {% endif %}
+    {% endblock %}
+  </head>
+
+  <body>
+    <header class="header header_mobile_fixed">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="#">
+            <img src="{{ url_for('static', filename='img/horizontal-logo.svg') }}" alt="" class="header__logo" />
+          </a>
+          <form
+            action=""
+            class="
+              form-block
+              header__search-block header__search-block_mobile_hidden
+            "
+          >
+            <input
+              name="search-location"
+              type="text"
+              class="form-block__input"
+              placeholder="Search Location |"
+            />
+            <button class="btn form-block__btn">
+              <img src="{{ url_for('static', filename='img/search-icon.svg') }}" alt="search-icon" />
+            </button>
+          </form>
+          <a
+            href="#"
+            class="profile header__profile header__profile_mobile_hidden"
+          >
+            <img
+              src="{{ url_for('static', filename='img/profile-avatar.png') }}"
+              alt="avatar: Nathan"
+              class="profile__avatar"
+            />
+            <span class="profile__name">Nathan</span>
+          </a>
+          <button class="menu-btn header__menu-btn">
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+            <span class="menu-btn__line"></span>
+          </button>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <div class="container">
+          <div class="header__nav-wrapper">
+            <div class="header__nav__item header__nav__item_mobile_visible">
+              <a
+                href="#"
+                class="profile header__profile header__profile_mobile_visible"
+              >
+                <img
+                  src="{{ url_for('static', filename='img/profile-avatar.png') }}"
+                  alt="avatar: Nathan"
+                  class="profile__avatar"
+                />
+                <span class="profile__name profile__name_light">Nathan</span>
+              </a>
+            </div>
+            <div class="header__nav__item header__nav__item_mobile_visible">
+              <form
+                action=""
+                class="
+                  form-block
+                  header__search-block header__search-block_mobile_visible
+                "
+              >
+                <input
+                  name="search-location"
+                  type="text"
+                  class="form-block__input"
+                  placeholder="Search Location |"
+                />
+                <button class="btn form-block__btn">
+                  <img src="{{ url_for('static', filename='img/search-icon.svg') }}" alt="search-icon" />
+                </button>
+              </form>
+            </div>
+
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">All Deals</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Hotels</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Activities</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Hotel Day Packages</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Restaurants</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Events</a>
+            </div>
+            <div class="header__nav__item">
+              <a href="#" class="header__nav__link">Rodrigues</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <nav class="breadcrumb">
+      <div class="container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-list__item">
+            <a href="#" class="breadcrumb-list__link">Home</a>
+          </li>
+          <li class="breadcrumb-list__item">
+            <a href="#" class="breadcrumb-list__link">Flash Offers</a>
+          </li>
+          <li class="breadcrumb-list__item">Grand Hilton Hotel</li>
+        </ul>
+      </div>
+    </nav>
+    {% block content -%}
+    {% endblock %}
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <a href="#" class="footer__logo_vertical"><img
+            src="{{ url_for('static', filename='img/vertical_logo.svg') }}"
+            alt="Logo: Best Tour Plan"
+            
+          /></a>
+          <div class="footer__list footer__categories">
+            <h3 class="title footer__title">All Categories</h3>
+            <ul class="footer__ul">
+              <li class="footer__li">
+                <a href="#" class="footer__link">All Deals</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Hotels</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Activities</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Spa Packages</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Hotel Day Packages</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Restaurants</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Fitness</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Rodrigues</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list footer__additional-info">
+            <h3 class="title footer__title">Additional Information</h3>
+            <ul class="footer__ul">
+              <li class="footer__li">
+                <a href="" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">How does it work</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Frequently Asked Questions</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link">Deals.mu loyalty program</a>
+              </li>
+              <li class="footer__li">
+                <a href="#" class="footer__link"
+                  >Promote your Business on BTP</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__social-network">
+            <h3 class="title footer__title footer__title_inline">
+              social network
+            </h3>
+            <div class="social-network-wrapper">
+              <a href="#" class="footer__link"
+                ><img
+                  src="{{ url_for('static', filename='img/facebook.svg') }}"
+                  class="footer__img"
+                  alt="Icon: Facebook"
+                />
+              </a>
+              <a href="#" class="footer__link"
+                ><img
+                  src="{{ url_for('static', filename='img/youtube.svg') }}"
+                  class="footer__img"
+                  alt="Icon: Youtube"
+              /></a>
+              <a href="#" class="footer__link"
+                ><img
+                  src="{{ url_for('static', filename='img/instagram.svg') }}"
+                  class="footer__img"
+                  alt="Icon: instagram"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__list footer__legal-info">
+            <h3 class="title footer__title">legal information</h3>
+            <ul class="footer__ul">
+              <li class="footer__li">
+                <a href="" class="footer__link">Terms & Conditions</a>
+              </li>
+              <li class="footer__li">
+                <a href="" class="footer__link">Disclaimer</a>
+              </li>
+              <li class="footer__li">
+                <a href="" class="footer__link">Cancellation policy</a>
+              </li>
+              <li class="footer__li">
+                <a href="" class="footer__link">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact-details">
+            <h3 class="title footer__title">Contact Details</h3>
+            <p class="footer__text">
+              Feel free to contact us by phone, email or by our contact form
+            </p>
+            <ul class="footer__ul">
+              <li class="footer__li footer__li_mb-2">
+                <div class="footer__icon">
+                  <img
+                    src="{{ url_for('static', filename='img/map-marker.svg') }}"
+                    alt="map-marker"
+                    class="footer__img"
+                  />
+                </div>
+
+                9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
+                States
+              </li>
+              <li class="footer__li footer__li_mb-2">
+                <div class="footer__icon">
+                  <img
+                    src="{{ url_for('static', filename='img/phone-call.svg') }}"
+                    alt="phone-call"
+                    class="footer__img"
+                  />
+                </div>
+                <div class="footer__li__lines">
+                  <p class="footer__li__line">Tel (business hours) : <a class="footer__link" href="tel:269 1500">269 1500</a></p>
+                <p class="footer__li__line">Tel (hotline) Monday - Saturday: <a class="footer__link" href="52-56-61-38">52-56-61-38</a> (08:00 am – 20:00 pm)</p> 
+                <p class="footer__li__line">Tel (hotline) Sunday: <a class="footer__link" href="52-56-61-38">52-56-61-38</a> (08:00 am – 14:00 pm)</p> 
+                </div>
+              </li>
+              <li class="footer__li footer__li_mb-2">
+                <div class="footer__icon">
+                  <img src="{{ url_for('static', filename='img/email.svg') }}" alt="email" class="footer__img" />
+                </div>
+                <a class="footer__link" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact-form">
+            <h3 class="title footer__title">Send us a message</h3>
+            <form action="{{ current_url }}" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="footer__input input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  minlength="2"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="footer__input input footer__phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  minlength="18"
+                  required
+                />
+              </div>
+              <input type="hidden" name="feedback">
+              <div class="footer__input-group footer__input-group_full">
+                <input
+                  type="mail"
+                  class="footer__input input footer__mail"
+                  placeholder="Email*"
+                  name="mail"
+                  required
+                />
+              </div>
+              <textarea
+                class="message footer__message"
+                placeholder="Message"
+                name="message"
+              ></textarea>
+              <button class="btn footer__btn">Send</button>
+              <span class="info footer__info">* Required Fields</span>
+            </form>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom__links">
+              <a href="" class="footer__link footer__link_bottom">Disclaimer</a>
+              <a href="" class="footer__link footer__link_bottom"
+                >Conditions of use</a
+              >
+              <a href="" class="footer__link footer__link_bottom"
+                >Cancellation policy</a
+              >
+            </div>
+            <img
+              src="{{ url_for('static', filename='img/pay_systems.png') }}"
+              alt="Pay Systems"
+              class="pay_systems"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="{{ url_for('static', filename='script/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/jquery.validate.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/jquery.mask.min.js') }}"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='script/js/slider.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/parallax.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/mobile-menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/modal.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/form-validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='script/js/animation.js') }}"></script>
+</html>

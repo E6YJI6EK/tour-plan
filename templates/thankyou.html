@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="main">
+      <div class="container">
+          <div class="main-wrapper">
+            <h1 class="main__title">
+              Message sent. Have a nice day!
+            </h1>
+            <p class="main__subtitle">
+              In 5 minutes our manager will call you.
+            </p>
+            <a href="{{ url_for('main') }}" class="go_back">Back to Home</a>
+          </div>
+      </div>
+    </section>
+{% endblock %}

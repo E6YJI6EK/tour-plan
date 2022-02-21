@@ -1,0 +1,58 @@
+.activities
+    padding-top: 60px
+    padding-bottom: 98px
+    &__title
+        font-weight: bold
+        font-size: 24px
+        line-height: 30px
+        text-transform: uppercase
+        margin: 0 0 57px 0
+    &-wrapper
+        display: grid
+        grid-template: 255px / repeat(4, 255px)
+        column-gap: 30px
+        z-index: 0  
+.card
+    +flex(space-between, flex-start, column)
+    position: relative
+    border-radius: 6px
+    overflow: hidden
+    z-index: 1
+    padding: 24px 26px
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%)
+    &__img
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: -2
+    &__title
+        color: #fff
+        margin-top: auto
+        z-index: 2
+        margin-bottom: 18px
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        max-width: 200px
+        overflow-wrap: break-word
+    &__btn
+        font-weight: 600
+        font-size: 12px
+        line-height: 16px
+        padding: 7px 22px
+        z-index: 10
+        border-radius: 4px
+        cursor: pointer

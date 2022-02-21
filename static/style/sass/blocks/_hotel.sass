@@ -1,0 +1,116 @@
+.hotel
+    padding-top: 23px
+    padding-bottom: 70px
+    overflow-x: hidden
+    
+    &-info
+        padding-bottom: 20px
+        +flex(space-between, center, row)
+        &__name
+            margin-top: 4px
+            margin-bottom: 0
+        &__description
+            margin: 0
+    &-name
+        font-size: 24px
+        line-height: 30px
+    &-wrapper
+        +flex(inherit,center,wrap)
+    &__offer
+        margin-left: 14px
+        margin-top: 4px
+    &-description
+        font-size: 12px
+        line-height: 15px
+    &-grid  
+        +flex(space-between, none, row)
+    &-right-wrapper
+        +flex(space-between, center, column)
+.stars
+    flex-basis: 100%
+.offer
+    font-size: 10px
+    line-height: 13px
+    padding: 4px 9px
+    background: $primary-color
+    border-radius: 4px
+    color: #ffffff
+.rating 
+    max-width: 65px
+    min-height: 45px
+    text-align: center
+    background: $primary-color
+    border-radius: 4px
+    color: #ffffff
+    &__text
+        font-size: 8px
+        line-height: 10px
+    &__counter
+        font-size: 14px
+        line-height: 18px
+
+.booking
+    font-family: Nunito
+    background: $dark-color
+    color: #ffffff
+    border-radius: 8px
+    width: 350px
+    max-height: 210px   
+    padding: 28px
+    &__info
+        +flex(space-between, flex-start, row)
+        margin-bottom: 9px
+    &__price
+        +flex(space-between, flex-start, column)
+    &__start
+        font-size: 10px
+        line-height: 14px
+    &__pricetag
+        font-weight: 800
+        font-size: 24px
+        line-height: 33px
+    &__per-room
+        font-size: 12px
+        line-height: 16px
+    &__room
+        margin-top: 4px
+        
+    &__text
+        margin-bottom: 8px
+        font-size: 12px
+        line-height: 16px
+        +flex(space-between, center, row)
+        min-width: 80px
+    &__description
+        margin-left: 9px
+    &__call-center
+        margin-bottom: 17px
+        font-family: Nunito
+        color: #ffffff
+        +flex(space-between, center, row)
+    &__heading
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+    &__number
+        +flex(space-between, center, row)
+        min-width: 76px
+        color: inherit
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+    &__num
+        margin-left: 8px
+    &__btn
+        border-radius: 4px
+        width: 100%
+        min-height: 45px
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px
+
+.map
+    width: 347px
+    height: 213px
+    border-radius: 10px
+    overflow: hidden

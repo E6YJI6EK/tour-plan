@@ -1,0 +1,116 @@
+// общие стили проекта
+*
+    box-sizing: border-box
+
+body
+    font-family: Mulish
+    color: $font-color
+    background: $secondary-color
+
+.container
+    max-width: 1110px
+    margin: auto
+
+=flex($jc, $ai, $ff)
+    display: flex
+    justify-content: $jc
+    align-items: $ai
+    flex-flow: $ff
+
+// общие стили картинок 
+img
+    object-fit: cover
+
+// общие стили ссылок
+a
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+
+// общие стили кнопок
+button
+    background: transparent
+    border: none
+    cursor: pointer
+.btn
+    border-radius: 4px
+    color: #fff
+    background-color: $primary-color
+    &:hover
+        background-color: darken($primary-color, 5%)
+
+// отключение стилей при наведении при ширине экрана < 992px
+@media (max-width: 992px)
+    .btn:hover
+        background-color: $primary-color
+    a:hover
+        text-decoration: none
+
+textarea
+    resize: none
+
+// убираем аутлайн
+textarea:active, textarea:focus
+    outline: none
+
+button:active, button:focus
+    outline: none
+
+input:active, input:focus
+    outline: none
+
+// общие стили форм
+.input
+    background-color: #fff
+    border-radius: 4px
+    border: none
+    padding: 0 23px 0 23px
+    height: 50px
+.message
+    background-color: #fff
+    border-radius: 4px
+    padding: 18px 23px
+    border: none
+
+.title 
+    color: #fff
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+
+.info
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: $footer-color  
+
+.invalid
+    color: $primary-color
+    
+// стили для скроллбара
+.stop-scroll
+    height: 100%
+    overflow: hidden
+    margin-right: 5px
+
+::-webkit-scrollbar 
+    width: 5px
+
+::-webkit-scrollbar-track 
+    background: lightgrey
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset 
+
+::-webkit-scrollbar-thumb 
+    background: $primary-color
+    border-radius: 8px
+
+::-webkit-scrollbar-thumb:hover 
+    background: darken($primary-color, 5%)
+
+// ссылка на гланую страницу
+.go_back
+    color: $font-color
+    margin-top: 15px
+
+ 
